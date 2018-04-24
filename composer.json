@@ -1,0 +1,16 @@
+{
+    "name": "lajosbencz/mkkp-hoax-radar",
+    "description": "MKKP Hoax Radar",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "lazos",
+            "email": "lajos.bencz@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "google/apiclient": "2.0"
+    }
+}
