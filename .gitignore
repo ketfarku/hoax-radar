@@ -1,0 +1,9 @@
+
+/.idea/
+/vendor/
+/cache/
+
+/cfg/config.php
+/cfg/credentials.json
+
+!**/.gitkeep
