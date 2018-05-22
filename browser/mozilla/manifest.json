@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "MKKP Hoax Radar",
+  "version": "0.1.0",
+  "description": "Kamu hírportálok feketelistája",
+  "icons": {
+    "64": "icon-64.png",
+    "48": "icon-48.png",
+    "32": "icon-32.png",
+    "16": "icon-16.png"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "content.js"
+      ],
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "run_at": "document_start"
+    }
+  ]
+}

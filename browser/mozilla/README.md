@@ -1,2 +1,2 @@
-#MKKP Putin Alert
-Orosz propaganda oldalak feketelistája.
+#MKKP Hoax Radar
+Kamu hírportálok feketelistája
