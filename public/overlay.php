@@ -1,9 +1,7 @@
 <?php
 
-require_once __DIR__ . '/../bootstrap.php';
-
 $params = [
-    'title' => 'HOAX ALERT!',
+    'alert' => 'HOAX ALERT!',
     'image' => 'https://mkkp-hoax-radar.lazos.me/img/putin.gif',
     'auditor' => 'mkkp.hu',
 ];
@@ -17,7 +15,7 @@ foreach($params as $k=>$v) {
 ?>
 <div id="mkkp-hoax-radar-overlay">
     <div id="mkkp-hoax-radar-text">
-        <span><?= $params['title'] ?></span>
+        <span><?= $params['alert'] ?></span>
     </div>
     <div id="mkkp-hoax-radar-dance">
         <img src="<?= $params['image'] ?>" />
