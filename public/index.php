@@ -12,7 +12,7 @@
             padding: 0;
             height: 100%;
             min-height: 100%;
-            background: url('/img/mkkp-logo.jpg') no-repeat center;
+            background: url('/img/mkkp-logo.png') no-repeat center;
             background-size: contain;
         }
     </style>
