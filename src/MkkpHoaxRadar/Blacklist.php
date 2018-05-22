@@ -71,6 +71,6 @@ class Blacklist
         foreach($valueRange['values'] as $row) {
             $list[] = array_combine(self::HEADER, $row);
         }
-        file_put_contents(self::CACHE, json_encode($list));
+        file_put_contents(self::CACHE, json_encode($list), LOCK_EX);
     }
 }
