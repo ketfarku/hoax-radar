@@ -28,7 +28,7 @@ if(!is_dir($logDir)) {
     mkdir($logDir, 0770, true);
 }
 if(!is_file(LOGFILE)) {
-    if(touch(LOGFILE)) {
+    if(!touch(LOGFILE)) {
         throw new RuntimeException('Failed to create logfile: '.LOGFILE);
     }
 }
