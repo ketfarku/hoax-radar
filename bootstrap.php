@@ -1,6 +1,7 @@
 <?php
 
-ini_set('error_reporting', E_ERROR);
+ini_set('display_errors', 1);
+error_reporting(E_ERROR);
 
 global $config;
 $config = require __DIR__ . '/cfg/config.php';
