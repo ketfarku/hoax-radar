@@ -12,3 +12,4 @@ $fh = fopen(\MkkpHoaxRadar\Blacklist::CACHE, 'r');
 flock($fh, LOCK_SH);
 fpassthru($fh);
 flock($fh, LOCK_UN);
+fclose($fh);
