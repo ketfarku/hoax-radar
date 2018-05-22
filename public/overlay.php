@@ -4,7 +4,7 @@ require_once __DIR__ . '/../bootstrap.php';
 
 $params = [
     'title' => 'HOAX ALERT!',
-    'image' => 'https://mkkp-hoax-alert.lazos.me/img/putin.gif',
+    'image' => 'https://mkkp-hoax-radar.lazos.me/img/putin.gif',
     'auditor' => 'mkkp.hu',
 ];
 
