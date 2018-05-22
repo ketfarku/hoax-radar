@@ -4,6 +4,8 @@ global $config;
 
 require_once __DIR__ . '/../../bootstrap.php';
 
+header('Content-Type: application/json');
+
 if(!is_file(\MkkpHoaxRadar\Blacklist::CACHE)) {
     echo '[]';
 }
