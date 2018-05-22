@@ -18,6 +18,12 @@ class Blacklist
 
     public function __construct(array $config=[])
     {
+        $cacheDir = dirname(self::CACHE);
+        if(!is_dir($cacheDir)) {
+            if(!mkdir($cacheDir, 0770, true)) {
+                throw new RuntimeException('Failed to create cache directory for file '.self::CACHE);
+            }
+        }
         $this->_config = $config;
         if(!is_readable($config['credentials'])) {
             throw new RuntimeException('Invalid credentials file: '.$config['credentials']);
