@@ -9,14 +9,18 @@
     "32": "icon-32.png",
     "16": "icon-16.png"
   },
+  "permissions":  [
+    "activeTab",
+    "https://mkkp-hoax-radar.lazos.me/blacklist/",
+    "https://mkkp-hoax-radar.lazos.me/overlay.php"
+  ],
   "content_scripts": [
     {
       "js": [
         "content.js"
       ],
       "matches": [
-        "http://*/*",
-        "https://*/*"
+        "*://*/*"
       ],
       "run_at": "document_start"
     }
