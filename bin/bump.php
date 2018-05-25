@@ -51,7 +51,7 @@ foreach(BROWSERS as $browser) {
             $zip->addFile($file, basename($file));
         }
         if($zip->close()) {
-            `git add {$file}`;
+            `git add ./browser/dist/{$browser}-{$version}.zip`;
             echo "Done {$browser}", PHP_EOL;
         }
         else {
