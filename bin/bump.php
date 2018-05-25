@@ -36,6 +36,7 @@ $packageJson->version = $version = join('.', $version);
 $tag = 'v' . $version;
 file_put_contents($fileJson, json_encode($packageJson, JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES), LOCK_EX);
 sleep(5);
+`git commit -m "composer" -- ./composer.json`;
 
 const BROWSERS = ['chrome', 'mozilla'];
 
