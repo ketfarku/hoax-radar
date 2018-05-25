@@ -63,4 +63,6 @@ foreach(BROWSERS as $browser) {
     }
 }
 
+sleep(5);
+
 `git commit -m "bump {$tag}" && git tag {$tag} && git push`;
