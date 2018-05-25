@@ -1,28 +1,22 @@
 {
-    "manifest_version": 2,
-    "name": "MKKP Hoax Radar",
-    "version": "0.1.7",
-    "description": "Kamu hírportálok feketelistája.",
-    "icons": {
-        "64": "icon-64.png",
-        "48": "icon-48.png",
-        "32": "icon-32.png",
-        "16": "icon-16.png"
-    },
-    "permissions": [
-        "activeTab",
-        "https://mkkp-hoax-radar.lazos.me/blacklist/",
-        "https://mkkp-hoax-radar.lazos.me/overlay.php"
-    ],
-    "content_scripts": [
+    "name": "lajosbencz/mkkp-hoax-radar",
+    "description": "MKKP Hoax Radar",
+    "version": "0.1.6",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
         {
-            "js": [
-                "content.js"
-            ],
-            "matches": [
-                "*://*/*"
-            ],
-            "run_at": "document_start"
+            "name": "lazos",
+            "email": "lajos.bencz@gmail.com"
         }
-    ]
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "MkkpHoaxRadar\\": "src/MkkpHoaxRadar"
+        }
+    },
+    "require": {
+        "google/apiclient": "2.0"
+    }
 }

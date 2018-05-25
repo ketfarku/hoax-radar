@@ -42,9 +42,10 @@ foreach(BROWSERS as $browser) {
     echo "Processing browser {$browser}", PHP_EOL;
     $zipPath = __DIR__ . "/../browser/dist/{$browser}-{$version}.zip";
     $dirPath = __DIR__ . "/../browser/{$browser}/";
-    $manifestJson = json_decode(file_get_contents($dirPath.'manifest.json'));
+    $manifestPath = $dirPath.'manifest.json';
+    $manifestJson = json_decode(file_get_contents($manifestPath));
     $manifestJson->version = $version;
-    file_put_contents($fileJson, json_encode($manifestJson, JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES), LOCK_EX);
+    file_put_contents($manifestPath, json_encode($manifestJson, JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES), LOCK_EX);
     if(is_file($zipPath)) {
         unlink($zipPath);
     }
