@@ -1,5 +1,7 @@
 <?php
 
+$config = require __DIR__ . '/../cfg/config.php';
+
 $params = [
     'alert' => 'HOAX ALERT!',
     'image' => 'https://mkkp-hoax-radar.lazos.me/img/putin.gif',
@@ -20,9 +22,13 @@ foreach($params as $k=>$v) {
     <div id="mkkp-hoax-radar-dance">
         <img src="<?= $params['image'] ?>" />
     </div>
-    <a id="mkkp-hoax-radar-link" href="http://<?= $params['auditor'] ?>" target="_blank">
-        <?= $params['auditor'] ?>
-    </a>
+    <div id="mkkp-hoax-radar-link">
+        <a href="http://<?= $params['auditor'] ?>" target="_blank">
+            <?= $params['auditor'] ?>
+        </a>
+        <br/>
+        Ha valami kimaradt a listából, <a href="<?= $config['report_url'] ?>" target="_blank">itt tudod nekünk elküldeni</a>!
+    </div>
     <div id="mkkp-hoax-radar-close" onclick="var element = document.getElementById('mkkp-hoax-radar-overlay'); element.outerHTML = '';">
         X
     </div>
