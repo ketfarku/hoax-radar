@@ -23,9 +23,8 @@ foreach($params as $k=>$v) {
         <img src="<?= $params['image'] ?>" />
     </div>
     <div id="mkkp-hoax-radar-link">
-        <a href="http://<?= $params['auditor'] ?>" target="_blank">
-            <?= $params['auditor'] ?>
-        </a>
+        Auditálta:
+        <a href="http://<?= $params['auditor'] ?>" target="_blank"><?= $params['auditor'] ?></a>
         <br/>
         Ha valami kimaradt a listából, <a href="<?= $config['report_url'] ?>" target="_blank">itt tudod nekünk elküldeni</a>!
     </div>
@@ -80,6 +79,8 @@ foreach($params as $k=>$v) {
         position: absolute;
         right: 12px;
         bottom: 12px;
+        padding: 2px 8px;
+        text-align: right;
     }
 
     #mkkp-hoax-radar-close {
