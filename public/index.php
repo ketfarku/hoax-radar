@@ -49,6 +49,11 @@ $blacklist = new \MkkpHoaxRadar\Blacklist($config);
     <table class="table is-bordered is-narrow is-fullwidth">
         <thead>
         <tr>
+            <td colspan="2" class="has-text-right">
+                Ha valami kimaradt a listából, <a href="<?= $config['report_url'] ?>" target="_blank">itt tudod nekünk elküldeni</a>!
+            </td>
+        </tr>
+        <tr>
             <th>Domain név (weboldal címe)</th>
             <th>Auditor (listához hozzáadta)</th>
         </tr>
